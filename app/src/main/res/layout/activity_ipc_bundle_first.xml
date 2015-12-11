@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/solarized_bg_light"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <include
+        layout="@layout/fragment_logger"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/MyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="SecondActivity"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>
+

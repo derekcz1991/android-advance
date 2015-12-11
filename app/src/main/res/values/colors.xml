@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="solarized_bg_dark">#FF002b36</color>
+    <color name="solarized_text_light">#FF839496</color>
+    <color name="solarized_bg_light">#FFfdf6e3</color>
+    <color name="solarized_text_dark">#FF586e75</color>
+    <color name="solarized_blue">#FF268bd2</color>
+</resources>

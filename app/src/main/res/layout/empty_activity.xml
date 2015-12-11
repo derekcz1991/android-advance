@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sample_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/solarized_bg_light"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <include
+        layout="@layout/fragment_logger"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></include>
+
+</LinearLayout>
+
