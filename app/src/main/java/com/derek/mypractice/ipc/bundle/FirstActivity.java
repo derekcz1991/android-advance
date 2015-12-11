@@ -38,8 +38,6 @@ public class FirstActivity extends BaseActivity implements View.OnClickListener 
         tvDesc.setText("文件共享也是一种不错的进程间通信方式，两个进程通过读／写同一个文件来交换数据。" +
                 "在此Activity中序列化一个对象到文件系统中，在SecondActivity中恢复这个对象");
 
-        super.codeUrl = MyUtils.getCodeUrl(this.getClass().getName());
-        Log.d(TAG, "codeUrl = " + codeUrl);
     }
 
     @Override

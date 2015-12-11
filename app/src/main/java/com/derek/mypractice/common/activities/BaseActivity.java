@@ -23,6 +23,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.derek.mypractice.R;
+import com.derek.mypractice.common.MyConstants;
+import com.derek.mypractice.common.MyUtils;
 import com.derek.mypractice.common.logger.Log;
 import com.derek.mypractice.common.logger.LogFragment;
 import com.derek.mypractice.common.logger.LogWrapper;
@@ -44,6 +46,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setUpView();
         initializeLogging();
+
+        codeUrl = MyUtils.getCodeFileUrl(this.getClass().getName());
     }
 
     /**
@@ -58,7 +62,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         } else {
             getMenuInflater().inflate(menuRes, menu);
         }
-
         return true;
     }
 
@@ -68,7 +71,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.menu_code:
                     Intent intent = new Intent(this, WebViewActivity.class);
-                    intent.putExtra(WebViewActivity.EXTRA_URL, codeUrl);
+                    intent.putExtra(WebViewActivity.EXTRA_URL, MyConstants.CODE_ROOT_URL + codeUrl);
                     startActivity(intent);
                     break;
             }

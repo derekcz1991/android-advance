@@ -18,9 +18,11 @@ public class MyUtils {
         }
     }
 
-    public static String getCodeUrl(String clsName) {
+    public static String getCodeFileUrl(String clsName) {
         return clsName.replace(".", "/") + ".java";
     }
 
-
+    public static String getCodeDirUrl(String packageName) {
+        return packageName.replace(".", "/");
+    }
 }

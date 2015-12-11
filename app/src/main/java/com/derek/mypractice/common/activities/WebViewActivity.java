@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.webkit.DownloadListener;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -17,6 +18,8 @@ import com.derek.mypractice.R;
  * Created by derek on 15/10/16.
  */
 public class WebViewActivity extends AppCompatActivity {
+    private static final String TAG = "WebViewActivity";
+
     public static final String EXTRA_URL = "url";
 
     private WebView mWebView;
@@ -30,6 +33,7 @@ public class WebViewActivity extends AppCompatActivity {
         mWebView = (WebView) findViewById(R.id.web_view);
         mWebView.getSettings().setJavaScriptEnabled(true);
 
+        Log.d(TAG, getIntent().getStringExtra(EXTRA_URL));
         mWebView.loadUrl(getIntent().getStringExtra(EXTRA_URL));
 
         mWebView.setWebViewClient(new WebViewClient() {

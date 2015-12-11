@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.derek.mypractice">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.derek.mypractice.permission.ACCESS_BOOK_SERVICE"/>
+
+    <permission
+        android:name="com.derek.mypractice.permission.ACCESS_BOOK_SERVICE"
+        android:protectionLevel="normal" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".common.activities.WebViewActivity"></activity>
+        <activity
+            android:name=".common.activities.WebViewActivity"
+            android:theme="@style/NoActionBarTheme"></activity>
         <activity android:name=".SecondOutLineActivity"></activity>
         <activity android:name=".ipc.bundle.FirstActivity"></activity>
         <activity android:name=".ipc.bundle.SecondActivity"></activity>
